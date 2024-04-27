@@ -1,0 +1,40 @@
+.btn {
+    background: transparent;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 16px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.btn:active {
+    background: var(--main-color);
+    color: #fff;
+}
+
+.btn:disabled {
+    color: var(--disabled-color);
+    background: #fff;
+    border-color: var(--disabled-color);
+}
+
+.rowIcon {
+    margin-right: 10px;
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    .btn {
+        font-size: 15px;
+        padding: 8px 15px;
+    }
+}

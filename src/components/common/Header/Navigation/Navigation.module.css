@@ -1,0 +1,135 @@
+.navigate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+}
+.navigate a {
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+.navigate a:hover {
+    background-color: #f0f0f0;
+}
+.container {
+    position: relative;
+}
+.products {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin: 15px auto;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.products:hover {
+    background-color: #f0f0f0;
+}
+.products a {
+    padding-right: 0;
+}
+.products a:hover {
+    background: transparent;
+}
+.products .rowWrap {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    align-self: stretch;
+}
+.products .row {
+    color: var(--main-color);
+    transition: 0.3s;
+}
+.row.rotated {
+    transform: rotate(-180deg);
+}
+
+.categories {
+    position: absolute;
+    background: #fff;
+    z-index: 1;
+    left: 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 5px -3px, rgba(0, 0, 0, 0.14) 0 8px 10px 1px, rgba(0, 0, 0, 0.12) 0 3px 14px 2px;
+    border-radius: 4px;
+    padding: 8px 5px;
+    width: max-content;
+}
+
+.categories a {
+    display: block;
+    padding: 6px 16px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.categories a:hover {
+    background-color: #f0f0f0;
+}
+
+.navigate a {
+    font-weight: 600;
+    font-size: 16px;
+}
+@media (max-width: 875px) {
+    .navigate a {
+        padding: 6px 6px;
+    }
+}
+@media (max-width: 850px) {
+    .navigate {
+        flex-direction: column;
+        margin-top: 75px;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+    .navigate a, .products span {
+        font-weight: 600;
+        font-size: 19px;
+        color: var(--main-color);
+    }
+    .navigate a {
+        padding: 8px 0;
+    }
+    .products {
+        margin: 0;
+        margin-left: 17px;
+        padding: 6px 0;
+        justify-content: center;
+    }
+    .container {
+        width: 100%;
+        text-align: center;
+    }
+    .categories {
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+.my-categories-enter {
+    opacity: 0;
+}
+
+.my-categories-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.my-categories-exit {
+    opacity: 1;
+}
+
+.my-categories-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+

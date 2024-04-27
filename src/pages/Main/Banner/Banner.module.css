@@ -1,0 +1,139 @@
+.banner {
+    background: var(--main-color);
+    border-radius: 20px;
+    padding: 74px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #F2F3FE;
+}
+
+.content {
+    max-width: fit-content;
+    margin-right: 20px;
+}
+
+.content h1 {
+    font-size: 34px;
+    line-height: 40px;
+}
+.banner p {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 20px 0 30px 0
+}
+.buttons {
+    display: flex;
+    align-items: center;
+}
+.buttons a {
+    margin-left: 30px;
+    border-bottom: 1px solid #F2F3FE;
+    color: #F2F3FE;
+    line-height: 21px;
+}
+.image, .skeleton {
+    width: 350px;
+    height: 350px;
+}
+
+@media (max-width: 1015px) {
+    .banner {
+        padding: 54px 50px;
+    }
+    .image, .skeleton {
+        width: 300px;
+        height: 300px;
+    }
+    .buttons {
+        flex-direction: column;
+        align-items: start;
+    }
+    .buttons a {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 34px 30px;
+    }
+    .image, .skeleton {
+        width: 250px;
+        height: 250px;
+    }
+    .content h1 {
+        font-size: 27px;
+        line-height: 31px;
+    }
+    .banner p {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .buttons a {
+        font-size: 17px;
+    }
+}
+@media (max-width: 670px) {
+    .content h1 {
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+    }
+    .banner p {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+    }
+    .banner {
+        padding: 60px 40px;
+        flex-direction: column;
+    }
+    .image, .skeleton {
+        width: 320px;
+        height: 350px;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 44px;
+    }
+    .buttons {
+        align-items: center;
+    }
+}
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 20px;
+    }
+}
+@media (max-width: 390px) {
+    .content h1 {
+        font-size: 19px;
+        line-height: 22px;
+    }
+    .banner {
+        padding: 60px 15px;
+        flex-direction: column;
+    }
+    .banner p {
+        font-size: 17px;
+        line-height: 20px;
+    }
+    .content {
+        margin-bottom: 50px;
+    }
+    .image, .skeleton {
+        width: 260px;
+        height: 260px;
+    }
+}
+
+@media (max-width: 390px) {
+    .image, .skeleton {
+        width: 100%;
+        height: auto;
+    }
+}

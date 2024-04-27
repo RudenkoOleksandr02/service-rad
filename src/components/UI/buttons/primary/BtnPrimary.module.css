@@ -1,0 +1,40 @@
+.btn {
+    background: #3462C3;
+    color: #fff;
+    border: 1px solid #3462C3;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 16px;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #365BA7;
+}
+.btn:active {
+    background: #fff;
+    color: #3462C3;
+}
+
+.btn:disabled {
+    color: #fff;
+    background: #C2C2C2;
+    border: #C2C2C2;
+    width: 183px;
+}
+
+.rowIcon {
+    margin-right: 10px;
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    .btn {
+        font-size: 15px;
+        padding: 8px 15px;
+    }
+}

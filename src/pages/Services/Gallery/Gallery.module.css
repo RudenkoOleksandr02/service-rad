@@ -1,0 +1,22 @@
+.wrapper {
+    padding: 30px 0;
+}
+.image, .skeleton {
+    width: 260px;
+    height: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+    .image, .skeleton {
+        width: 250px;
+        height: 250px;
+    }
+}
+@media (max-width: 768px) {
+    .image, .skeleton {
+        width: 166px;
+        height: 166px;
+    }
+}

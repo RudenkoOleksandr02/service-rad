@@ -1,0 +1,106 @@
+.form {
+    background: var(--main-color);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.wrapper {
+    padding: 70px 25px;
+    width: 1190px;
+}
+
+.wrapper h2 {
+    font-size: 30px;
+}
+.wrappContent {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 30px;
+    max-width: 560px;
+}
+.wrappText {
+    margin-top: 30px;
+}
+.wrappText p:last-child {
+    margin-top: 8px;
+}
+.wrappContact {
+    display: flex;
+    flex-direction: column;
+    font-family: "Raleway", sans-serif;
+}
+
+.phoneNumber {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 8px;
+}
+.phoneImg {
+    color: #fff;
+}
+
+.wrappContactTablet {
+    display: none;
+    align-items: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 1000px) {
+    .wrapper {
+        padding: 70px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 50px 15px;
+    }
+    .wrapper h2 {
+        font-size: 25px;
+    }
+}
+@media (max-width: 670px) {
+    .wrappContent {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+    .wrappContact {
+        display: none;
+    }
+    .wrappContactTablet {
+        display: flex;
+        flex-direction: column;
+    }
+    .wrappText {
+        margin: 30px 0;
+    }
+    .info {
+        margin: 0;
+        align-self: start;
+    }
+}
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 50px 15px;
+    }
+    .wrapper h2 {
+        font-size: 22px;
+    }
+}
+@media (max-width: 360px) {
+    .wrapper {
+        padding: 50px 15px;
+    }
+    .wrapper h2 {
+        font-size: 18px;
+    }
+}

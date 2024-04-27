@@ -1,0 +1,48 @@
+main {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.content {
+    max-width: 1190px;
+    padding: 0 25px;
+    margin: 40px auto 70px;
+}
+main h2 {
+    font-size: 30px;
+}
+
+
+
+@media (max-width: 1000px) {
+    .content {
+        padding: 0 20px;
+        margin: 20px auto 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 0 15px;
+        margin: 20px auto 50px;
+    }
+    main h1 {
+        font-size: 27px;
+    }
+}
+@media (max-width: 480px) {
+    .content {
+        padding: 0 15px;
+    }
+    main h1 {
+        font-size: 24px;
+    }
+}
+@media (max-width: 360px) {
+    .content {
+        padding: 0 15px;
+    }
+    main h1 {
+        font-size: 19px;
+    }
+}

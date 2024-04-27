@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-scroll-lock {
+    overflow: hidden;
+}
+
+#root {
+    --main-color: #3462C3;
+    --secondary-color: #365BA7;
+    --disabled-color: #C2C2C2;
+}
+.test {
+    background: #3462C3;
+    height: 300px;
+}
+.wrapper {
+    box-sizing: border-box;
+    line-height: 23.4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+button, a, input, p, label, strong, li {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+}
+h1, h2, h3, h4, h5 {
+    font-weight: 600;
+    font-family: "Raleway", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+h1 {
+    font-size: 34px;
+}
+h2 {
+    font-size: 25px;
+}
+
+@media (max-width: 1000px) {
+}
+@media (max-width: 768px) {
+    p, li {
+        line-height: 20.8px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 17px;
+    }
+    button, a, input, p, label, strong, li {
+        font-size: 16px;
+    }
+}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 17px;
+    }
+    button, a, input, p, label, strong, li {
+        font-size: 16px;
+    }
+}
+@media (max-width: 360px) {
+    p {
+        line-height: 19.5px;
+    }
+    h1 {
+        font-size: 19px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 17px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    button, a, input, p, label, strong, li {
+        font-size: 15px;
+    }
+}

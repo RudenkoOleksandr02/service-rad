@@ -1,0 +1,66 @@
+.wrapper {
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.containerQuestion {
+    padding: 30px;
+    background: #F3F6FE;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.containerQuestion span {
+    margin-right: 5px;
+}
+.row {
+    transition: 0.3s;
+}
+.rotated {
+    transform: rotate(-90deg);
+}
+.containerAnswer {
+    padding: 20px 30px;
+    background: #F3F6FE;
+    border-radius: 20px;
+    margin-top: 10px;
+    transition: 0.3s;
+    display: none;
+}
+.containerAnswer.show {
+    display: block;
+}
+
+
+.my-answer-enter {
+    opacity: 0;
+}
+.my-answer-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.my-answer-exit {
+    opacity: 1;
+}
+
+.my-answer-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+@media (max-width: 480px) {
+    .containerQuestion {
+        padding: 25px 20px;
+    }
+    .containerAnswer {
+        padding: 20px;
+    }
+}
+@media (max-width: 360px) {
+    .containerQuestion {
+        padding: 20px;
+    }
+}

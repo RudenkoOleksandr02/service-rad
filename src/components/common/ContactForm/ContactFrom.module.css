@@ -1,0 +1,27 @@
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 460px;
+
+}
+.contactForm label {
+    color: #F3F6FE;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+.contactForm label:first-child {
+    margin-top: 0;
+}
+
+@media (max-width: 1000px) {
+    .contactForm {
+        width: 430px;
+    }
+}
+@media (max-width: 850px) {
+    .contactForm {
+        width: 100%;
+    }
+}

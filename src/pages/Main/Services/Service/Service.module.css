@@ -1,0 +1,75 @@
+.service {
+    width: 560px;
+    height: 290px;
+    border-radius: 20px;
+    padding: 30px;
+    background: #F3F6FE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.service h3 {
+    font-size: 22px;
+}
+.service p {
+    margin: 20px 0 0;
+}
+.buttons {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.linkMore {
+    margin-left: 20px;
+}
+
+@media (max-width: 1000px) {
+    .service {
+        width: 430px;
+        height: 336px;
+    }
+    .linkMore {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .service {
+        width: 407px;
+        height: 360px;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-self: start;
+    }
+    .linkMore {
+        margin: 0;
+        margin-top: 10px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .service {
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+        padding: 30px 20px;
+    }
+    .buttons {
+        position: static;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .service p {
+        margin: 15px 0;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+}

@@ -1,0 +1,227 @@
+header {
+    display: flex;
+    height: 90px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1190px;
+    padding: 0 25px;
+}
+.logoWrapper a {
+    display: inline-block;
+}
+header a {
+    font-family: "Montserrat", sans-serif;
+}
+.logo {
+    width: 93px;
+    height: 60px;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+.contact {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    gap: 20px;
+}
+.contact .item {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+}
+@media (max-width: 1100px) {
+    .contact {
+        gap: 10px;
+    }
+}
+@media (max-width: 1075px) {
+    header {
+        width: 100%;
+        padding: 0 20px;
+    }
+    header a {
+        font-size: 16px;
+    }
+    .contact {
+        flex-direction: column;
+        position: relative;
+    }
+    .contact .secondPhone {
+        position: absolute;
+        align-self: start;
+        top: 25px;
+    }
+
+    .contact .firstPhone {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    .contact .row {
+        margin-left: 5px;
+        color: var(--main-color);
+    }
+    .rotated {
+        transform: rotate(-180deg);
+    }
+    .logo {
+        width: 90px;
+        height: 58px;
+    }
+    header {
+        height: 98px;
+    }
+}
+@media (max-width: 900px) {
+    .logo {
+        width: 75px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 850px) {
+    header {
+        max-width: 100%;
+        padding: 0 20px;
+        height: 80px;
+    }
+    .buttonNav {
+        width: 37px;
+        height: 23px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #fff;
+        border: none;
+    }
+    .buttonNav .item {
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+        background: var(--main-color);
+    }
+    .menu {
+        min-height: 640px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 24px;
+        z-index: 100;
+    }
+    .contact {
+        margin-top: 45px;
+    }
+    .contact .item {
+        display: flex;
+        align-items: center;
+        color: var(--main-color);
+        margin-top: 15px;
+        padding: 0;
+    }
+    .menu .logo {
+        width: 92px;
+        height: 60px;
+        position: absolute;
+        bottom: 30px;
+    }
+
+}
+@media (max-width: 768px) {
+    header {
+        max-width: 738px;
+        padding: 0 15px;
+    }
+}
+@media (max-width: 480px) {
+    header {
+        padding: 0 15px;
+    }
+    .logo {
+        width: 86px;
+        height: 56px;
+    }
+}
+@media (max-width: 360px) {
+    header {
+        padding: 0 15px;
+    }
+    .logo {
+        width: 68px;
+        height: 44px;
+    }
+    .buttonNav {
+        width: 33px;
+    }
+    header {
+        height: 60px;
+    }
+}
+
+.my-phone-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.my-phone-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.my-phone-exit {
+    opacity: 1;
+}
+
+.my-phone-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.my-row-enter {
+    transform: rotate(0deg);
+}
+
+.my-row-enter-active {
+    transform: rotate(-180deg);
+    transition: transform 300ms;
+}
+
+.my-row-exit {
+    transform: rotate(-180deg);
+}
+
+.my-row-exit-active {
+    transform: rotate(0deg);
+    transition: transform 300ms;
+}
+
+.my-menu-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.my-menu-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.my-menu-exit {
+    opacity: 1;
+}
+
+.my-menu-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+}

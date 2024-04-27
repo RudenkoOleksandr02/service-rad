@@ -1,0 +1,26 @@
+.wrapper {
+    margin-top: 70px;
+}
+.partner {
+    height: 175px;
+    background: #F3F6FE;
+    border-radius: 20px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.partner .skeleton, .partner .image {
+    width: 165px;
+}
+@media (max-width: 768px) {
+    .wrapper {
+        margin-top: 50px;
+    }
+    .partner {
+        height: 115px;
+    }
+    .skeleton, .image {
+        width: 110px;
+    }
+}

@@ -1,0 +1,34 @@
+.wrapper {
+    margin-top: 70px;
+}
+.skeleton, .image {
+    height: 555px;
+    width: 263px;
+}
+@media (max-width: 1000px) {
+    .skeleton, .image {
+        height: 450px;
+        width: 250px;
+    }
+}
+@media (max-width: 768px) {
+    .wrapper {
+        margin-top: 50px;
+    }
+    .skeleton, .image {
+        width: 200px;
+        height: 365px;
+    }
+}
+@media (max-width: 480px) {
+    .skeleton, .image {
+        width: 280px;
+        height: 510px;
+    }
+}
+@media (max-width: 360px) {
+    .skeleton, .image {
+        width: 240px;
+        height: 445px;
+    }
+}

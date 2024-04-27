@@ -1,0 +1,10 @@
+.wrappText {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 23.4px;
+}
+.text:last-child {
+    margin-top: 10px;
+}

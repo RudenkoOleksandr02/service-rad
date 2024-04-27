@@ -1,0 +1,16 @@
+.wrapper {
+    margin-top: 70px;
+}
+.wrapper h2 {
+    margin-bottom: 5px;
+}
+@media (max-width: 768px) {
+    .wrapper {
+        margin-top: 60px;
+    }
+}
+@media (max-width: 480px) {
+    .wrapper {
+        margin-top: 50px;
+    }
+}

@@ -1,0 +1,30 @@
+.wrapper {
+    margin-top: 70px;
+}
+
+.awards .skeleton, .awards .image {
+    width: 263px;
+    height: 375px;
+}
+@media (max-width: 1000px) {
+    .awards .skeleton, .awards .image {
+        width: 250px;
+        height: 375px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        margin-top: 50px;
+    }
+    .awards .skeleton, .awards .image {
+        width: 200px;
+        height: 300px;
+    }
+}
+@media (max-width: 360px) {
+    .awards .skeleton, .awards .image {
+        width: 170px;
+        height: 250px;
+    }
+}

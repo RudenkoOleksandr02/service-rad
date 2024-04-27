@@ -1,0 +1,178 @@
+.wrapper {
+    margin-top: 70px;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    background: #F3F6FE;
+    border-radius: 20px;
+    height: 360px;
+}
+.banner .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-right: 10px;
+    padding: 5px;
+}
+.banner .wrapSkeleton {
+    width: 60%;
+}
+.banner .inner p {
+    text-align: center;
+    max-width: 360px;
+    margin: 20px 0 30px;
+}
+.banner .inner h2 {
+    text-align: center;
+    line-height: 1.2em;
+}
+.image, .skeleton {
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.descriptions {
+    margin-top: 50px;
+}
+.description {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.description h3 {
+    width: 50%;
+    padding-right: 30px;
+    word-wrap: break-word;
+}
+.description div {
+    width: 50%;
+}
+.description div p {
+    margin-top: 10px;
+}
+.description div p:first-child {
+    margin: 0;
+}
+@media (max-width: 1000px) {
+    .banner .inner {
+        width: 50%;
+    }
+    .banner .wrapSkeleton {
+        width: 50%;
+    }
+    .description h3 {
+        width: 40%;
+    }
+    .description div {
+        width: 60%;
+    }
+}
+@media (max-width: 768px) {
+    .banner {
+        height: 280px;
+    }
+    .description h3 {
+        width: 30%;
+    }
+    .description div {
+        width: 70%;
+    }
+    .wrapper {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 480px) {
+    .banner {
+        flex-direction: column;
+        width: 100%;
+        height: 440px;
+    }
+    .banner .inner {
+        width: 100%;
+        height: 100%;
+    }
+    .banner .wrapSkeleton {
+        width: 100%;
+        height: 200px;
+        align-self: end;
+    }
+    .description {
+        flex-direction: column;
+    }
+    .description h3 {
+        width: 100%;
+    }
+    .description div {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper ul li {
+    margin-top: 10px;
+}
+.wrapper ul li:first-child {
+    margin: 0;
+}
+.wrapper ul li::marker {
+    color: #3462C3;
+}
+.wrapper ol {
+    list-style-type: none;
+    counter-reset: num;
+    padding: 0;
+}
+.wrapper ol li {
+    margin: 20px 0 0 0;
+    line-height: 1.4;
+    display: flex;
+    align-items: start;
+    position: relative;
+}
+.wrapper ol li strong {
+    margin: 3px 0 10px 40px;
+    color: var(--main-color);
+    display: block;
+}
+.wrapper ol li p {
+    display: inline-block;
+}
+.wrapper ol li:before {
+    position: absolute;
+    content: counter(num);
+    counter-increment: num;
+    display: inline-block;
+    top: 0;
+    min-width: 30px;
+    min-height: 30px;
+    background: var(--main-color);
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+}

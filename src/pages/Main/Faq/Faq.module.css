@@ -1,0 +1,8 @@
+.faq h2 {
+    margin-top: 70px;
+}
+@media (max-width: 768px) {
+    .faq h2 {
+        margin-top: 50px;
+    }
+}

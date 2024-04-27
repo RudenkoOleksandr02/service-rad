@@ -1,0 +1,42 @@
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.buttons {
+    display: flex;
+}
+.buttons button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    background: #F3F6FE;
+    transform: rotate(90deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.buttons button:last-child {
+    transform: rotate(-90deg);
+    margin-left: 20px;
+}
+.buttons button:disabled {
+    cursor: default;
+}
+.buttons button:disabled .rowIcon {
+    color: #C2C2C2;
+}
+.rowIcon{
+    width: 15px;
+    color: var(--main-color);
+}
+.content {
+    margin-top: 20px;
+    display: flex;
+    margin-right: -1000px;
+    width: calc(100% + 100000px);
+    transition: transform 0.5s ease;
+}
