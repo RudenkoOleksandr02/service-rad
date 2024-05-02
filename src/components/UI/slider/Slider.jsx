@@ -9,10 +9,11 @@ const Slider = ({ children, title = 'NAME', gap = 25}) => {
     const slideRef = useRef(null);
     const sliderContainerRef = useRef(null);
     const [sliderWidth, setSliderWidth] = useState(0);
+    const [startX, setStartX] = useState(null)
 
     useLayoutEffect(() => {
         const sliderWidth = sliderContainerRef.current.offsetWidth;
-        const slideWidth = slideRef.current.offsetWidth + gap
+        const slideWidth = slideRef.current.offsetWidth + gap / 2
         setSliderWidth(sliderWidth);
         setSlideWidth(slideWidth)
     }, []);
@@ -20,7 +21,7 @@ const Slider = ({ children, title = 'NAME', gap = 25}) => {
     useEffect(() => {
         const handleResize = () => {
             setSliderWidth(sliderContainerRef.current.offsetWidth);
-            setSlideWidth(slideRef.current.offsetWidth + gap)
+            setSlideWidth(slideRef.current.offsetWidth + gap / 2)
         };
 
         window.addEventListener('resize', handleResize);
@@ -31,10 +32,14 @@ const Slider = ({ children, title = 'NAME', gap = 25}) => {
     }, [gap]);
 
     useEffect(() => {
-        const showSlides = Math.floor(sliderWidth / (slideWidth - gap));
+        const showSlides = Math.floor(sliderWidth / (slideWidth));
         const totalSlides = children.length;
         const isNextSlide = currentIndex + showSlides < totalSlides;
         setShowNextSlide(isNextSlide);
+        console.log('Ширина слайдера ' + sliderWidth)
+        console.log('Ширина слайда ' + slideWidth)
+        console.log('showSlides ' + showSlides)
+
     }, [currentIndex, slideWidth, children, gap, sliderWidth]);
 
     const goToPrevSlide = () => {
@@ -48,8 +53,32 @@ const Slider = ({ children, title = 'NAME', gap = 25}) => {
     };
 
     const sliderStyles = {
-        transform: `translateX(-${currentIndex * slideWidth}px)`,
+        transform: `translateX(-${currentIndex * (slideWidth + gap / 2)}px)`,
         gap: `0 ${gap}px`
+    };
+
+    const handleTouchStart = (event) => {
+        setStartX(event.touches[0].clientX)
+    }
+    const handleTouchMove = (event) => {
+        if (!startX) return;
+
+        const currentX = event.touches[0].clientX;
+        const diff = startX - currentX;
+
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+                goToNextSlide();
+            } else {
+                if (currentIndex) {
+                    goToPrevSlide();
+                }
+            }
+            setStartX(null);
+        }
+    };
+    const handleTouchEnd = (event) => {
+        setStartX(null)
     };
 
     return (
@@ -65,7 +94,13 @@ const Slider = ({ children, title = 'NAME', gap = 25}) => {
                     </button>
                 </div>
             }
-            <div className={classes.content} style={sliderStyles}>
+            <div
+                className={classes.content}
+                style={sliderStyles}
+                onTouchStart={e => handleTouchStart(e)}
+                onTouchMove={e => handleTouchMove(e)}
+                onTouchEnd={e => handleTouchEnd(e)}
+            >
                 {React.Children.map(children, (child, index) => (
                     <div key={index} ref={slideRef}>
                         {child}

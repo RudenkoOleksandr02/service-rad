@@ -1,20 +1,32 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 import Skeleton from "../../../components/UI/skeleton/Skeleton";
 import classes from './Gallery.module.css'
 import {connect} from "react-redux";
 import Slider from "../../../components/UI/slider/Slider";
 import Media from "react-media";
+import ModalImage from "../../../components/UI/modalImage/ModalImage";
 
 const Gallery = ({gallery}) => {
+    const [selectedImage, setSelectedImage] = useState(null);
+
+    const handleImageClick = (imageSrc) => {
+        setSelectedImage(imageSrc);
+    };
+    const handleImageClose = () => {
+        setSelectedImage(null)
+    }
+
     const galleryJSX = gallery.map(el => {
         return (
-            <Skeleton
-                src={el.image}
-                alt='Partners'
-                classNameSkeleton={classes.skeleton}
-                classNameImage={classes.image}
-                key={el.id}
-            />
+            <div className={classes.scale} key={el.id}>
+                <Skeleton
+                    src={el.image}
+                    alt='Partners'
+                    classNameSkeleton={classes.skeleton}
+                    classNameImage={classes.image}
+                    onClick={() => handleImageClick(el.image)}
+                />
+            </div>
         )
     })
 
@@ -39,6 +51,13 @@ const Gallery = ({gallery}) => {
                     </Fragment>
                 )}
             </Media>
+            {selectedImage && (
+                <ModalImage
+                    onClose={() => setSelectedImage(null)}
+                >
+                    <img src={selectedImage} alt='Selected'/>
+                </ModalImage>
+            )}
         </section>
     );
 };

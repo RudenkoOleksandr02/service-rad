@@ -7,6 +7,18 @@
     border-radius: 20px;
     object-fit: cover;
 }
+.scale {
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+}
+.image {
+    transition: 0.5s;
+}
+.image:hover {
+    transform: scale(1.1);
+    cursor: url("./zoom-in.png"), auto;
+}
 
 @media (max-width: 1000px) {
     .image, .skeleton {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import classes from './Skeleton.module.css';
 
-const Skeleton = ({ src, alt, classNameSkeleton, classNameImage}) => {
+const Skeleton = ({ src, alt, classNameSkeleton, classNameImage, onClick = () => {}}) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const Skeleton = ({ src, alt, classNameSkeleton, classNameImage}) => {
         return <div className={classes.skeleton + ' ' + classNameSkeleton}/>
     }
 
-    return <img src={src} alt={alt} className={classNameImage}/>
+    return <img src={src} alt={alt} className={classNameImage} onClick={onClick}/>
 
 };
 
