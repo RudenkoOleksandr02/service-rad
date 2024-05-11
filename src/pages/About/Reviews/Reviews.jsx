@@ -1,20 +1,28 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 import {connect} from "react-redux";
 import classes from './Reviews.module.css'
 import Skeleton from "../../../components/UI/skeleton/Skeleton";
 import Slider from "../../../components/UI/slider/Slider";
 import Media from "react-media";
+import ModalImage from "../../../components/UI/modalImage/ModalImage";
 
 const Reviews = ({reviews}) => {
+    const [selectedImage, setSelectedImage] = useState(null);
+    const handleImageClick = (imageSrc) => {
+        setSelectedImage(imageSrc);
+    };
+
     const reviewsJSX = reviews.map(el => {
         return (
+            <div className={classes.scale} key={el.id}>
                 <Skeleton
                     src={el.image}
                     alt='Partners'
                     classNameSkeleton={classes.skeleton}
                     classNameImage={classes.image}
-                    key={el.id}
+                    onClick={() => handleImageClick(el.image)}
                 />
+            </div>
         )
     })
 
@@ -39,6 +47,12 @@ const Reviews = ({reviews}) => {
                     </Fragment>
                 )}
             </Media>
+            {selectedImage && (
+                <ModalImage
+                    onClose={() => setSelectedImage(null)}
+                    selectedImage={selectedImage}
+                />
+            )}
         </section>
     );
 };

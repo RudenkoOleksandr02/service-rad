@@ -36,10 +36,6 @@ const Slider = ({ children, title = 'NAME', gap = 25}) => {
         const totalSlides = children.length;
         const isNextSlide = currentIndex + showSlides < totalSlides;
         setShowNextSlide(isNextSlide);
-        console.log('Ширина слайдера ' + sliderWidth)
-        console.log('Ширина слайда ' + slideWidth)
-        console.log('showSlides ' + showSlides)
-
     }, [currentIndex, slideWidth, children, gap, sliderWidth]);
 
     const goToPrevSlide = () => {

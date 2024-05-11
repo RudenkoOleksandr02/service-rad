@@ -12,10 +12,6 @@ const Gallery = ({gallery}) => {
     const handleImageClick = (imageSrc) => {
         setSelectedImage(imageSrc);
     };
-    const handleImageClose = () => {
-        setSelectedImage(null)
-    }
-
     const galleryJSX = gallery.map(el => {
         return (
             <div className={classes.scale} key={el.id}>
@@ -54,9 +50,8 @@ const Gallery = ({gallery}) => {
             {selectedImage && (
                 <ModalImage
                     onClose={() => setSelectedImage(null)}
-                >
-                    <img src={selectedImage} alt='Selected'/>
-                </ModalImage>
+                    selectedImage={selectedImage}
+                />
             )}
         </section>
     );

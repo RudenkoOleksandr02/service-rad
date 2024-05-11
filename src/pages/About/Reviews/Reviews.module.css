@@ -4,6 +4,15 @@
 .skeleton, .image {
     height: 555px;
     width: 263px;
+    transition: 0.5s;
+}
+.scale {
+    overflow: hidden;
+    display: flex;
+}
+.skeleton, .image:hover {
+    transform: scale(1.1);
+    cursor: url("../../../img/zoom-in.png"), auto;
 }
 @media (max-width: 1000px) {
     .skeleton, .image {

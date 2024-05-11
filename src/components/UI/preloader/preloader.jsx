@@ -1,11 +1,14 @@
 import React from 'react';
-import preloader from './preloader.gif';
+import preloaderGray from './preloader-gray.png';
+import preloaderWhite from './preloader-white.png';
 import classes from './preloader.module.css'
 
-const Preloader = () => {
+const Preloader = ({color = 'gray'}) => {
+    const preloader = color === 'white' ? preloaderWhite : preloaderGray
+
     return (
         <div className={classes.preloader}>
-            <img src={preloader}/>
+            <img src={preloader} alt='preloader'/>
         </div>
     );
 };
