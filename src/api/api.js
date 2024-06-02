@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = 'https://directus-production-b585.up.railway.app';
+const url = 'https://directus-production-539a.up.railway.app';
 const instance = axios.create({
     baseURL: `${url}/graphql`,
     headers: {'content-type': 'application/json'}
