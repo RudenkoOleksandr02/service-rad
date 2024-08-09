@@ -14,6 +14,7 @@ import ScrollToTop from "./ScrollToTop";
 import {getFaq} from "./store/questions-reducer";
 import {getCategories} from "./store/categories-reducer";
 import {getServices} from "./store/services-reducer";
+import {Helmet, HelmetProvider} from 'react-helmet-async';
 
 
 function App({getContacts, getFaq, getCategories, getServices}) {
@@ -41,11 +42,22 @@ function App({getContacts, getFaq, getCategories, getServices}) {
 
     return (
         <div className="wrapper">
-            <Header/>
-            <AppRouter/>
-            <Footer/>
-            <ModalContactForm/>
-            <ModalSuccess/>
+            <HelmetProvider>
+                <Helmet>
+                    <title>Service_Rad</title>
+                    <meta name="description"
+                          content="Сучасне обладнання для ветеринарної практики. Ефективні рішення для вдосконалення Вашої роботи!"
+                    />
+                    <meta name="keywords"
+                          content="Рентгенівські детектори, Випромінювачі, Стоматологічні рентгени, Електрокоагулятори"
+                    />
+                </Helmet>
+                <Header/>
+                <AppRouter/>
+                <Footer/>
+                <ModalContactForm/>
+                <ModalSuccess/>
+            </HelmetProvider>
         </div>
     );
 }

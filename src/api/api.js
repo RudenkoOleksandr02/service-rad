@@ -15,6 +15,8 @@ const categoriesQL = `
         image {
             id
         }
+        meta_keys
+        meta_description
       }
     }
 `;
@@ -27,7 +29,9 @@ export const categoriesAPI = () => {
                     id: category.id,
                     name: category.name,
                     link: category["name_in_english"],
-                    image: url + '/' + 'assets' + '/' + category.image.id
+                    image: url + '/' + 'assets' + '/' + category.image.id,
+                    meta_keys: category.meta_keys,
+                    meta_description: category.meta_description
                 }
             })
         })

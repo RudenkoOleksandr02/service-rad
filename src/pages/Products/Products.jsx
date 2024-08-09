@@ -6,10 +6,14 @@ import Product from "./Product/Product";
 import classes from './Products.module.css'
 import Breadcrumbs from "../../components/UI/breadcrumbs/Breadcrumbs";
 import Preloader from "../../components/UI/preloader/preloader";
+import {Helmet, HelmetProvider} from "react-helmet-async";
 
-const Products = ({products, categoryName, getProducts}) => {
+const Products = ({products, categoryName, getProducts, categories}) => {
     const [isLoading, setIsLoading] = useState(true);
     const params = useParams();
+    const category = categories.filter(category => category.name === categoryName);
+    const metaKeys = category[0]?.["meta_keys"];
+    const metaDescription = category[0]?.["meta_description"];
 
     useEffect(() => {
         setIsLoading(true);
@@ -26,12 +30,22 @@ const Products = ({products, categoryName, getProducts}) => {
 
     return (
         <section className={classes.wrapper}>
+            <HelmetProvider>
+                <Helmet>
+                    <meta name="description"
+                          content={metaDescription}
+                    />
+                    <meta name="keywords"
+                          content={metaKeys}
+                    />
+                </Helmet>
             <Breadcrumbs links={[
                 {title: 'Продукція', path: 'products'},
                 {title: categoryName, path: params.id}
             ]}/>
             <h1>{categoryName}</h1>
             {productsJSX}
+            </HelmetProvider>
         </section>
     );
 };
@@ -39,7 +53,8 @@ const Products = ({products, categoryName, getProducts}) => {
 const mapStateToProps = (state) => {
     return {
         products: state.products.products,
-        categoryName: state.products.categoryName
+        categoryName: state.products.categoryName,
+        categories: state.categories.categories
     }
 }
 
