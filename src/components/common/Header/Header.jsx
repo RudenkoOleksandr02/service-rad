@@ -21,16 +21,16 @@ const Header = ({setContactModalActive, setContactModalText, contacts}) => {
     }
 
     return (
-        <header>
+        <header className={classes.header}>
             <div className={classes.logoWrapper}>
                 <Link to='/'>
                     <img src={logo} alt='logo' className={classes.logo}/>
                 </Link>
             </div>
             <Media queries={{
-                small: "(max-width: 850px)",
-                medium: "(min-width: 851px) and (max-width: 1075px)",
-                large: "(min-width: 1076px)"
+                small: "(max-width: 999px)",
+                medium: "(min-width: 1000px) and (max-width: 1279px)",
+                large: "(min-width: 1280px)"
             }}>
                 {matches => (
                     <Fragment>

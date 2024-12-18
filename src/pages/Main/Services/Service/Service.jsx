@@ -20,8 +20,10 @@ const Service = ({title, description, setContactModalActive, setContactModalText
 
     return (
         <div className={classes.service}>
-            <h3>{title}</h3>
-            <p>{description}</p>
+            <div className={classes.inner}>
+                <h3>{title}</h3>
+                <p>{description}</p>
+            </div>
             <div className={classes.buttons}>
                 <BtnPrimary onClick={handleOrderClick}>Замовити послугу</BtnPrimary>
                 <div className={classes.linkMore}>

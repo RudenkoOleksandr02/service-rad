@@ -2,17 +2,17 @@ import React, {Fragment, useState} from 'react';
 import {connect} from "react-redux";
 import classes from './Awards.module.css'
 import Skeleton from "../../../components/UI/skeleton/Skeleton";
-import Slider from "../../../components/UI/slider/Slider";
 import Media from "react-media";
-import ModalImage from "../../../components/UI/modalImage/ModalImage";
+import ModalImageWithSwiper from "../../../components/UI/modalImageWithSwiper/ModalImageWithSwiper";
+import SecondarySwiper from "../../../components/UI/secondarySwiper/SecondarySwiper";
 
 const Awards = ({awards}) => {
-    const [selectedImage, setSelectedImage] = useState(null);
-    const handleImageClick = (imageSrc) => {
-        setSelectedImage(imageSrc);
+    const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+    const handleImageClick = (index) => {
+        setSelectedImageIndex(index);
     };
 
-    const awardsJSX = awards.map(el => {
+    const awardsJSX = awards.map((el, index) => {
         return (
             <div className={classes.awards} key={el.id}>
                 <Skeleton
@@ -20,7 +20,7 @@ const Awards = ({awards}) => {
                     alt='Partners'
                     classNameSkeleton={classes.skeleton}
                     classNameImage={classes.image}
-                    onClick={() => handleImageClick(el.image)}
+                    onClick={() => handleImageClick(index)}
                 />
             </div>
         );
@@ -29,28 +29,29 @@ const Awards = ({awards}) => {
     return (
         <section className={classes.wrapper}>
             <Media queries={{
-                small: "(max-width: 768px)",
-                medium: "(min-width: 769px) and (max-width: 1000px)",
-                large: "(min-width: 1001px)"
+                small: "(max-width: 999px)",
+                medium: "(min-width: 1000px) and (max-width: 1279px)",
+                large: "(min-width: 1280px)"
             }}>
                 {matches => (
                     <Fragment>
-                        {matches.small && <Slider title='Сертифікати та нагороди' gap={15}>
+                        {matches.small && <SecondarySwiper title='Сертифікати та нагороди' gap={15}>
                             {awardsJSX}
-                        </Slider>}
-                        {matches.medium && <Slider title='Сертифікати та нагороди' gap={20}>
+                        </SecondarySwiper>}
+                        {matches.medium && <SecondarySwiper title='Сертифікати та нагороди' gap={20}>
                             {awardsJSX}
-                        </Slider>}
-                        {matches.large && <Slider title='Сертифікати та нагороди' gap={30}>
+                        </SecondarySwiper>}
+                        {matches.large && <SecondarySwiper title='Сертифікати та нагороди' gap={30}>
                             {awardsJSX}
-                        </Slider>}
+                        </SecondarySwiper>}
                     </Fragment>
                 )}
             </Media>
-            {selectedImage && (
-                <ModalImage
-                    onClose={() => setSelectedImage(null)}
-                    selectedImage={selectedImage}
+            {selectedImageIndex !== null && (
+                <ModalImageWithSwiper
+                    onClose={() => setSelectedImageIndex(null)}
+                    selectedImageIndex={selectedImageIndex}
+                    images={awards.map((el) => el.image)}
                 />
             )}
         </section>

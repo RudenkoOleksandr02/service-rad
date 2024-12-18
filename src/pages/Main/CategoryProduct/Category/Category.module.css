@@ -1,22 +1,88 @@
 .category {
-    width: 360px;
     background: #F3F6FE;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 406px;
     justify-content: space-evenly;
 }
 
-.category h3 {
-    font-size: 22px;
-}
-.image, .skeleton {
-    width: 220px;
-    height: 220px;
+.image {
+    width: auto !important;
 }
 
+@media (min-width: 1280px) {
+    .category {
+        width: 360px;
+        padding: 30px;
+        gap: 30px;
+    }
+    .category h3 {
+        font-size: 22px;
+    }
+    .image, .skeleton {
+        width: 220px;
+        height: 220px;
+    }
+}
+@media (min-width: 1000px) and (max-width: 1279px) {
+    .category {
+        width: 340px;
+        padding: 30px;
+        gap: 30px;
+    }
+    .category h3 {
+        font-size: 22px;
+    }
+    .image, .skeleton {
+        width: 220px;
+        height: 220px;
+    }
+}
+@media (min-width: 768px) and (max-width: 999px) {
+    .category {
+        width: 290px;
+        padding: 30px;
+        gap: 20px;
+    }
+    .category h3 {
+        font-size: 19px;
+    }
+    .image, .skeleton {
+        width: 160px;
+        height: 160px;
+    }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+    .category {
+        width: 290px;
+        padding: 20px;
+        gap: 20px;
+    }
+    .category h3 {
+        font-size: 18px;
+    }
+    .image, .skeleton {
+        width: 160px;
+        height: 160px;
+    }
+}
+@media (max-width: 479px) {
+    .category {
+        width: 100%;
+        padding: 20px;
+        gap: 20px;
+    }
+    .category h3 {
+        font-size: 17px;
+    }
+    .image, .skeleton {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/*
 @media (max-width: 1000px) {
     .category {
         width: 340px;
@@ -28,9 +94,7 @@
         width: 256px;
         height: 318px;
     }
-    .category h3 {
-        font-size: 19px;
-    }
+
     .image, .skeleton {
         width: 160px;
         height: 160px;
@@ -42,9 +106,7 @@
         width: 224px;
         height: 316px;
     }
-    .category h3 {
-        font-size: 18px;
-    }
+
 }
 
 @media (max-width: 360px) {
@@ -53,7 +115,5 @@
         height: 294px;
         margin-top: 15px;
     }
-    .category h3 {
-        font-size: 17px;
-    }
-}
+
+}*/

@@ -45,18 +45,18 @@
     background: var(--main-color);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 999px) {
     .btn {
         height: 40px;
         font-size: 17px;
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 767px) {
     .btn {
         font-size: 16px;
     }
 }
-@media (max-width: 320px) {
+@media (max-width: 479px) {
     .btn {
         font-size: 15px;
     }

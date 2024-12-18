@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import classes from "../Header.module.css";
 import {CSSTransition} from "react-transition-group";
 import BtnTertiary from "../../../UI/buttons/tertiary/BtnTertiary";

@@ -1,8 +1,33 @@
 footer {
     width: 100%;
-    max-width: 1190px;
-    padding: 0 25px;
+    max-width: 1280px;
 }
+@media (min-width: 1280px) {
+    footer {
+        padding: 0 70px;
+    }
+}
+@media (min-width: 1000px) and (max-width: 1279px) {
+    footer {
+        padding: 0 60px;
+    }
+}
+@media (min-width: 768px) and (max-width: 999px) {
+    footer {
+        padding: 0 30px;
+    }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+    footer {
+        padding: 0 25px;
+    }
+}
+@media (max-width: 479px) {
+    footer {
+        padding: 0 25px;
+    }
+}
+
 .wrapper {
     display: flex;
     align-items: center;
@@ -20,9 +45,10 @@ footer {
     height: 100px;
 }
 
+/* socials */
 .social {
     margin-top: 40px;
-    width: 203px
+    width: 230px
 }
 .social p {
     font-weight: 500;
@@ -34,6 +60,10 @@ footer {
     display: inline-block;
     margin-right: 15px;
 }
+.social.tablet {
+    display: none;
+}
+
 .navigation {
     width: 100%;
     display: flex;
@@ -60,13 +90,9 @@ footer {
     font-family: "Montserrat", sans-serif;
 }
 
-.social.tablet {
-    display: none;
-}
 .contactMobile {
     display: none;
 }
-
 
 .bottom {
     height: 65px;
@@ -76,37 +102,9 @@ footer {
     align-items: center;
     display: flex;
 }
-@media (max-width: 1000px) {
-    footer {
-        padding: 0 20px;
-    }
-}
-@media (max-width: 768px) {
-    .email {
-        font-size: 14px;
-    }
-    footer {
-        padding: 0 15px;
-    }
-    .logo {
-        width: 125px;
-        height: 80px;
-    }
+@media (max-width: 999px) {
     .social {
         display: none;
-    }
-    .wrapper {
-        align-items: start;
-        padding: 30px 0;
-    }
-    .navigation {
-        margin-top: 20px;
-    }
-    .section .title {
-        font-size: 16px;
-    }
-    .section a {
-        font-size: 14px;
     }
     .social.tablet {
         display: block;
@@ -119,11 +117,8 @@ footer {
         margin-right: 10px;
         margin-top: 0;
     }
-    .bottom {
-        height: 55px;
-    }
 }
-@media (max-width: 620px) {
+@media (max-width: 767px) {
     .email {
         font-size: 17px;
     }
@@ -164,18 +159,38 @@ footer {
         margin-bottom: 5px;
     }
 }
+
+@media (max-width: 768px) {
+    .email {
+        font-size: 14px;
+    }
+    .logo {
+        width: 125px;
+        height: 80px;
+    }
+    .wrapper {
+        padding: 30px 0;
+    }
+    .navigation {
+        margin-top: 20px;
+    }
+    .section .title {
+        font-size: 16px;
+    }
+    .section a {
+        font-size: 14px;
+    }
+    .bottom {
+        height: 55px;
+    }
+}
+
 @media (max-width: 480px) {
     .email {
         font-size: 15px;
     }
-    footer {
-        padding: 0 15px;
-    }
 }
 @media (max-width: 360px) {
-    footer {
-        padding: 0 15px;
-    }
     .logo {
         width: 107px;
         height: 70px;

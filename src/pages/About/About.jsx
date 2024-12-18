@@ -46,7 +46,11 @@ const About = ({content, getContent, getPartners, getReviews, getAwards}) => {
                 <Content/>
                 <Partners/>
                 <Reviews/>
-                <Awards/>
+            </div>
+            <div className={classes.awards}>
+                <div className={classes.awardsInner}>
+                    <Awards/>
+                </div>
             </div>
             <SectionForm/>
         </section>

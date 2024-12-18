@@ -1,9 +1,9 @@
 import React, {Fragment} from 'react';
 import classes from './Partners.module.css'
 import {connect} from "react-redux";
-import Slider from "../../../components/UI/slider/Slider";
 import Media from "react-media";
 import Skeleton from "../../../components/UI/skeleton/Skeleton";
+import PrimarySwiper from "../../../components/UI/primarySwiper/PrimarySwiper";
 
 const Partners = ({partners}) => {
     const partnersJSX = partners.map(el => {
@@ -22,21 +22,21 @@ const Partners = ({partners}) => {
     return (
         <section className={classes.wrapper}>
             <Media queries={{
-                small: "(max-width: 768px)",
-                medium: "(min-width: 769px) and (max-width: 1000px)",
-                large: "(min-width: 1001px)"
+                small: "(max-width: 999px)",
+                medium: "(min-width: 1000px) and (max-width: 1279px)",
+                large: "(min-width: 1280px)"
             }}>
                 {matches => (
                     <Fragment>
-                        {matches.small && <Slider title='Наші партнери' gap={15}>
+                        {matches.small && <PrimarySwiper title='Наші партнери' gap={15}>
                             {partnersJSX}
-                        </Slider>}
-                        {matches.medium && <Slider title='Наші партнери' gap={20}>
+                        </PrimarySwiper>}
+                        {matches.medium && <PrimarySwiper title='Наші партнери' gap={20}>
                             {partnersJSX}
-                        </Slider>}
-                        {matches.large && <Slider title='Наші партнери' gap={30}>
+                        </PrimarySwiper>}
+                        {matches.large && <PrimarySwiper title='Наші партнери' gap={30}>
                             {partnersJSX}
-                        </Slider>}
+                        </PrimarySwiper>}
                     </Fragment>
                 )}
             </Media>

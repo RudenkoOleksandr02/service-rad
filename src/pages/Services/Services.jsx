@@ -8,6 +8,7 @@ import Preloader from "../../components/UI/preloader/preloader";
 import Service from "./Service/Service";
 import {getGallery} from "../../store/gallery-reducer";
 import Gallery from "./Gallery/Gallery";
+
 const Services = ({getServices, services, getGallery}) => {
     const [isLoadingServices, setIsLoadingServices] = useState(true);
     const [isLoadingGallery, setIsLoadingGallery] = useState(true);
@@ -21,28 +22,16 @@ const Services = ({getServices, services, getGallery}) => {
             .then(() => setIsLoadingGallery(false))
     }, []);
 
-    const servicesJSX = services.map((el, index) => {
-        if (!index) {
-            return <div key={el.id} className={classes.serviceWithGallery}>
-                <Service
-                    title={el.title}
-                    small_description={el["small_description"]}
-                    descriptions={el.descriptions}
-                    image={el.image}
-                    id={el.id}
-                />
-                <Gallery/>
-            </div>
-        } else {
-            return <Service
-                key={el.id}
+    const servicesJSX = services.map((el) => {
+        return <div className={classes.service} key={el.id} id={`service${el.id}`}>
+            <Service
                 title={el.title}
                 small_description={el["small_description"]}
                 descriptions={el.descriptions}
                 image={el.image}
                 id={el.id}
             />
-        }
+        </div>
     })
 
     if (isLoadingServices || isLoadingGallery) return <Preloader/>
@@ -50,11 +39,20 @@ const Services = ({getServices, services, getGallery}) => {
     return (
         <section className={classes.services}>
             <div className={classes.wrapper}>
-                <Breadcrumbs links={[
-                    {title: 'Послуги', path: 'services'}
-                ]}/>
-                <h1>Послуги</h1>
-                {servicesJSX}
+                <div className={classes.inner}>
+                    <Breadcrumbs links={[
+                        {title: 'Послуги', path: 'services'}
+                    ]}/>
+                    <h1>Послуги</h1>
+                </div>
+                <div className={classes.content}>
+                    {servicesJSX}
+                    <div className={classes.gallery}>
+                        <div className={classes.galleryInner}>
+                            <Gallery/>
+                        </div>
+                    </div>
+                </div>
             </div>
             <SectionForm/>
         </section>

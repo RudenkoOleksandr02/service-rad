@@ -10,15 +10,13 @@
     margin-left: 30px;
 }
 .image, .skeleton {
-    min-width: 360px;
-    max-width: 360px;
-    height: 340px;
     object-fit: cover;
 }
 .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
 }
 .inner h3 {
     font-size: 22px;
@@ -56,25 +54,32 @@
     font-family: "Montserrat", sans-serif;
     color: #000;
 }
-@media (max-width: 1000px) {
+
+@media (min-width: 1280px) {
+    .image, .skeleton {
+        width: 360px;
+        height: 340px;
+    }
+}
+@media (max-width: 1279px) {
+    .image, .skeleton {
+        width: 250px;
+        height: 280px;
+    }
     .content {
         margin-left: 20px;
-    }
-    .image, .skeleton {
-        min-width: 250px;
-        max-width: 250px;
-        height: 280px;
     }
     .inner h3 {
         font-size: 22px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 999px) {
+    .image, .skeleton {
+        width: 256px;
+        height: 280px;
+    }
     .inner h3 {
         font-size: 19px;
-    }
-    .wrapper {
-        flex-direction: column;
     }
     .cover {
         display: flex;
@@ -88,19 +93,13 @@
     .characteristics div {
         max-width: 100%;
     }
-    .wrap_characteristics {
-        background: #F3F6FE;
-        border-radius: 10px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-    }
+
     .wrap_characteristics .btn {
         align-self: center;
         margin-top: 15px;
     }
 }
-@media (max-width: 580px) {
+@media (max-width: 767px) {
     .cover {
         flex-direction: column;
         align-items: center;
@@ -108,18 +107,25 @@
     .image, .skeleton {
         width: 327px;
         height: 360px;
-        max-width: 100%;
-        max-height: 100%;
+    }
+    .wrapper {
+        flex-direction: column;
+    }
+    .wrap_characteristics {
+        background: #F3F6FE;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
     }
     .content {
         margin-left: 0;
+        width: 100%;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 479px) {
     .image, .skeleton {
         width: 250px;
         height: 275px;
-        max-width: 100%;
-        max-height: 100%;
     }
 }

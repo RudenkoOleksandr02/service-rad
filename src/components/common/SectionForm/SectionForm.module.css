@@ -8,12 +8,7 @@
 }
 
 .wrapper {
-    padding: 70px 25px;
-    width: 1190px;
-}
-
-.wrapper h2 {
-    font-size: 30px;
+    width: 1280px;
 }
 .wrappContent {
     display: flex;
@@ -41,7 +36,7 @@
 
 .phoneNumber {
     font-family: "Montserrat", sans-serif;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 .phoneImg {
     color: #fff;
@@ -53,21 +48,25 @@
     margin-top: 30px;
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 1280px) {
     .wrapper {
-        padding: 70px 20px;
+        padding: 70px 70px;
     }
 }
-
-@media (max-width: 768px) {
+@media (min-width: 1000px) and (max-width: 1279px) {
     .wrapper {
-        padding: 50px 15px;
-    }
-    .wrapper h2 {
-        font-size: 25px;
+        padding: 70px 60px;
     }
 }
-@media (max-width: 670px) {
+@media (min-width: 768px) and (max-width: 999px) {
+    .wrapper {
+        padding: 50px 30px;
+    }
+}
+@media (max-width: 767px) {
+    .wrapper {
+        padding: 50px 25px;
+    }
     .wrappContent {
         flex-direction: column;
         align-items: center;
@@ -88,19 +87,4 @@
         align-self: start;
     }
 }
-@media (max-width: 480px) {
-    .wrapper {
-        padding: 50px 15px;
-    }
-    .wrapper h2 {
-        font-size: 22px;
-    }
-}
-@media (max-width: 360px) {
-    .wrapper {
-        padding: 50px 15px;
-    }
-    .wrapper h2 {
-        font-size: 18px;
-    }
-}
+

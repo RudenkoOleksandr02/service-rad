@@ -4,6 +4,7 @@ import Slider from "../../../components/UI/slider/Slider";
 import Service from "./Service/Service";
 import Media from "react-media";
 import {connect} from "react-redux";
+import MySwiper from "../../../components/UI/primarySwiper/PrimarySwiper";
 
 const Services = ({services}) => {
     const servicesJSX = (
@@ -20,9 +21,9 @@ const Services = ({services}) => {
     return (
         <section className={classes.wrapper}>
             <Media queries={{
-                small: "(max-width: 480px)",
-                medium: "(min-width: 481px) and (max-width: 768px)",
-                large: "(min-width: 769px)"
+                small: "(max-width: 767px)",
+                medium: "(min-width: 768px) and (max-width: 999px)",
+                large: "(min-width: 1000px)"
             }}>
                 {matches => (
                     <Fragment>
@@ -30,12 +31,12 @@ const Services = ({services}) => {
                             <h2>Наші послуги</h2>
                             {servicesJSX}
                         </div>}
-                        {matches.medium && <Slider title='Наші послуги' gap={15}>
+                        {matches.medium && <MySwiper title='Наші послуги' gap={15}>
                             {servicesJSX}
-                        </Slider>}
-                        {matches.large && <Slider title='Наші послуги' gap={20}>
+                        </MySwiper>}
+                        {matches.large && <MySwiper title='Наші послуги' gap={20}>
                             {servicesJSX}
-                        </Slider>}
+                        </MySwiper>}
                     </Fragment>
                 )}
             </Media>

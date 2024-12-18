@@ -9,18 +9,19 @@
 .scale {
     overflow: hidden;
     display: flex;
+    justify-content: center;
 }
 .skeleton, .image:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     cursor: url("../../../img/zoom-in.png"), auto;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1279px) {
     .skeleton, .image {
         height: 450px;
         width: 250px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 999px) {
     .wrapper {
         margin-top: 50px;
     }
@@ -29,13 +30,13 @@
         height: 365px;
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 767px) {
     .skeleton, .image {
         width: 280px;
         height: 510px;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 479px) {
     .skeleton, .image {
         width: 240px;
         height: 445px;

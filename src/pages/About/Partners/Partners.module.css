@@ -10,17 +10,17 @@
     align-items: center;
     justify-content: center;
 }
-.partner .skeleton, .partner .image {
+.partner .skeleton {
     width: 165px;
 }
-@media (max-width: 768px) {
+@media (max-width: 999px) {
     .wrapper {
         margin-top: 50px;
     }
     .partner {
         height: 115px;
     }
-    .skeleton, .image {
+    .skeleton {
         width: 110px;
     }
 }

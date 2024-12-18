@@ -1,9 +1,4 @@
-.wrapper {
-    padding: 30px 0;
-}
 .image, .skeleton {
-    width: 260px;
-    height: 250px;
     border-radius: 20px;
     object-fit: cover;
 }
@@ -13,22 +8,40 @@
     display: flex;
 }
 .image {
-    transition: 0.5s;
+    transition: 0.3s;
 }
 .image:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     cursor: url("../../../img/zoom-in.png"), auto;
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 1280px) {
+    .image, .skeleton {
+        width: 263px;
+        height: 250px;
+    }
+}
+@media (min-width: 1000px) and (max-width: 1279px) {
     .image, .skeleton {
         width: 250px;
         height: 250px;
     }
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 999px) {
     .image, .skeleton {
         width: 166px;
         height: 166px;
+    }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+    .image, .skeleton {
+        width: 166px;
+        height: 166px;
+    }
+}
+@media (max-width: 479px) {
+    .image, .skeleton {
+        width: 149px;
+        height: 149px;
     }
 }

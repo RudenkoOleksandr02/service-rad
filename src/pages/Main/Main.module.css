@@ -1,48 +1,69 @@
-main {
+.main {
     position: relative;
     width: 100%;
     height: auto;
 }
 .content {
-    max-width: 1190px;
-    padding: 0 25px;
-    margin: 40px auto 70px;
-}
-main h2 {
-    font-size: 30px;
+    max-width: 1280px;
 }
 
-
-
-@media (max-width: 1000px) {
+@media (min-width: 1280px) {
+    .main h1 {
+        font-size: 34px;
+    }
+    .main h2 {
+        font-size: 30px;
+    }
     .content {
-        padding: 0 20px;
+        padding: 0 70px;
+        margin: 40px auto 70px;
+    }
+}
+@media (min-width: 1000px) and (max-width: 1279px) {
+    .main h1 {
+        font-size: 34px;
+    }
+    .main h2 {
+        font-size: 30px;
+    }
+    .content {
+        padding: 0 60px;
         margin: 20px auto 70px;
     }
 }
-
-@media (max-width: 768px) {
-    .content {
-        padding: 0 15px;
-        margin: 20px auto 50px;
-    }
-    main h1 {
+@media (min-width: 768px) and (max-width: 999px) {
+    .main h1 {
         font-size: 27px;
     }
-}
-@media (max-width: 480px) {
-    .content {
-        padding: 0 15px;
+    .main h2 {
+        font-size: 25px;
     }
-    main h1 {
+    .content {
+        padding: 0 30px;
+        margin: 20px auto 50px;
+    }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+    .main h1 {
         font-size: 24px;
     }
-}
-@media (max-width: 360px) {
-    .content {
-        padding: 0 15px;
+    .main h2 {
+        font-size: 22px;
     }
-    main h1 {
+    .content {
+        padding: 0 25px;
+        margin: 20px auto 50px;
+    }
+}
+@media (max-width: 479px) {
+    .main h1 {
         font-size: 19px;
+    }
+    .main h2 {
+        font-size: 18px;
+    }
+    .content {
+        padding: 0 25px;
+        margin: 20px auto 50px;
     }
 }

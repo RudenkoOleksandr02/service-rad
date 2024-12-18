@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import classes from './Main.module.css'
 import SectionForm from "../../components/common/SectionForm/SectionForm";
 import Banner from "./Banner/Banner";
@@ -7,14 +7,10 @@ import Advantages from "./Advantages/Advantages";
 import Services from "./Services/Services";
 import About from "./About/About";
 import Faq from "./Faq/Faq";
-import Preloader from "../../components/UI/preloader/preloader";
-import {connect} from "react-redux";
-import {getCategories} from "../../store/categories-reducer";
-import {getFaq} from "../../store/questions-reducer";
 
 const Main = () => {
     return (
-        <main>
+        <main className={classes.main}>
             <div className={classes.content}>
                 <Banner/>
                 <CategoryProduct/>

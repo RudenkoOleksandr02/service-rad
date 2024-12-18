@@ -8,8 +8,8 @@ const Question = ({question, answer}) => {
     const answerRef = useRef(null)
 
     return (
-        <div className={classes.wrapper} onClick={() => setIsOpen(isOpen => !isOpen)}>
-            <div className={classes.containerQuestion}>
+        <div className={classes.wrapper}>
+            <div className={classes.containerQuestion} onClick={() => setIsOpen(isOpen => !isOpen)}>
                 <p>{question}</p>
                 <div>
                     <Row className={`${classes.row} ${isOpen && classes.rotated}`}/>

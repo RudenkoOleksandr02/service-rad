@@ -15,7 +15,10 @@ import {getFaq} from "./store/questions-reducer";
 import {getCategories} from "./store/categories-reducer";
 import {getServices} from "./store/services-reducer";
 import {Helmet, HelmetProvider} from 'react-helmet-async';
-
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/free-mode';
+import 'swiper/css/scrollbar';
 
 function App({getContacts, getFaq, getCategories, getServices}) {
     const [isContactsLoading, setIsContactsLoading] = useState(true);

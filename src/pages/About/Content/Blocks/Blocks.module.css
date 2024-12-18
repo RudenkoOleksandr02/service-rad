@@ -24,7 +24,7 @@
 .inner p {
     margin-top: 20px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1279px) {
     .wrapper .wrapSkeleton .skeleton {
         height: 340px;
     }
@@ -34,12 +34,8 @@
     .wrapper .inner {
         width: 60%;
     }
-    .wrapper .wrapSkeleton {
-        width: 340px;
-        height: 340px;
-    }
 }
-@media (max-width: 768px) {
+@media (max-width: 999px) {
     .wrapper .wrapSkeleton .skeleton {
         height: 256px;
     }
@@ -47,7 +43,6 @@
         gap: 15px;
     }
     .wrapper .wrapSkeleton {
-        width: 256px;
         height: 256px;
     }
     .wrapper .inner {
@@ -57,7 +52,7 @@
         margin-top: 15px;
     }
 }
-@media (max-width: 670px) {
+@media (max-width: 767px) {
     .wrapper {
         flex-direction: column;
     }
@@ -72,13 +67,11 @@
     .inner p {
         margin-top: 20px;
     }
-}
-@media (max-width: 480px) {
     .wrapper .wrapSkeleton .skeleton {
         height: 230px;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 479px) {
     .wrapper .wrapSkeleton .skeleton {
         height: 200px;
     }

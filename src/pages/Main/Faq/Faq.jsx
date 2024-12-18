@@ -15,7 +15,9 @@ const Faq = ({faq}) => {
     return (
         <section className={classes.faq} id='questions'>
             <h2>Поширені питання</h2>
-            {questions}
+            <div className={classes.questions}>
+                {questions}
+            </div>
         </section>
     );
 };

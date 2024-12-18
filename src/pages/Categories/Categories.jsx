@@ -1,10 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {connect} from "react-redux";
 import Category from "./Category/Category";
-import {getCategories} from "../../store/categories-reducer";
 import classes from './Categories.module.css'
 import Breadcrumbs from "../../components/UI/breadcrumbs/Breadcrumbs";
-import Preloader from "../../components/UI/preloader/preloader";
 
 const Categories = ({categories}) => {
     const categoriesJSX = categories.map(category => {

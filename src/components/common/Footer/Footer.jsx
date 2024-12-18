@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import logo from './../../../img/logo.png'
 import classes from './Footer.module.css'
 
@@ -6,8 +6,8 @@ import whatsapp from './../../../img/whatsapp.png';
 import facebook from './../../../img/facebook.png';
 import instagram from './../../../img/instagram.png';
 import telegram from './../../../img/telegram.png';
+import youtube from './../../../img/youtube.png';
 import {connect} from "react-redux";
-import {getCategories} from "../../../store/categories-reducer";
 import {Link} from "react-router-dom";
 import {scrollToAnchorForLink} from "../../../utils/scrollToAnchor/scrollToAnchor";
 
@@ -28,9 +28,10 @@ const Footer = ({contacts, categories}) => {
         <a href={contacts.facebook}><img src={facebook} alt='facebook'/></a>
         <a href={contacts.instagram}><img src={instagram} alt='instagram'/></a>
         <a href={"https://t.me/" + contacts.telegram}><img src={telegram} alt='telegram'/></a>
+        <a href={contacts.youtube}><img src={youtube} alt='youtube'/></a>
     </>)
     const infoLinks = (<>
-        <Link to='/about'>Про нас</Link>
+    <Link to='/about'>Про нас</Link>
         <Link to='/services'>Наші послуги</Link>
         <Link to='/#questions' onClick={handleQuestionsLinkClick}>Найчастіші питання</Link>
     </>)

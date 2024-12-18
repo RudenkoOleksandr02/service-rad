@@ -8,8 +8,10 @@ export const scrollToAnchorForElement = (id) => {
     }
 }
 export const scrollToAnchorForLink = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-        element.scrollIntoView({behavior: 'smooth'});
-    }
-}
+    setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({behavior: 'smooth'});
+        }
+    }, 0); // Задержка в 0 ms для выполнения после изменения маршрута
+};
