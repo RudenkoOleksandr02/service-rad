@@ -44,7 +44,7 @@
     width: 1000px;
 }
 .selectedImage {
-    max-height: 80vh;
+    max-height: 75vh;
     max-width: 960px;
 }
 @media (max-width: 999px) {
